@@ -140,11 +140,11 @@ member_casual_ridetype <- clean_cyclist %>%
 ## Phase 5: Share
 ![Number_of_rides_by_hour](https://user-images.githubusercontent.com/108597401/177033124-f1bd038b-1e1f-40dd-a81f-7f3635f601e0.png)
 
-In this Graph we will see the number of rides broken down into the hours of the day. For both of the groups we could see that the rides are rising throughout the day beginning from 4 to 17 being the peak for both of them. But for members we notoce that we have three peaks one being 8 hours during the moening ,the other one  12 hours during the lunch time and the last one being at 17 hours in the evening. 
+In this Graph we will see the number of rides broken down into the hours of the day. For both of the groups we could see that the rides are rising throughout the day beginning from 4 to 17 hours being the peak for both of them. But for members we notoce that we have three peaks one being 8 hours during the moening ,the other one  12 hours during the lunch time and the last one being at 17 hours in the evening. 
 
 ![Number_rides_by_days_into_hours](https://user-images.githubusercontent.com/108597401/177031731-0d425387-aca1-4d8e-a5e1-525aa5908944.png)
 
-In these graphs we could observe that the rides are borken down into each day of the week by hours.
+In these graphs we could observe that the rides are broken down into each day of the week by hours.
 
 ![Number_of_rides_by_type](https://user-images.githubusercontent.com/108597401/177031938-715ece9d-441a-4809-8065-5307e4e9ea5b.png)
 
@@ -152,7 +152,7 @@ In this Graph we could see that member riders are more active through the week d
 
 ![Number_of_rides_month](https://user-images.githubusercontent.com/108597401/177032549-03ce65b4-b57f-46ad-80f2-013ef7d49946.png)
 
-In this graph the number of rides are broken into the months of the year. As we could see though the monhts of May to October the rides tend to be at its highest. which could be understanable because they are warmer months. While in the colder months such as November tp March rides tend to be at its lowest
+In this graph the number of rides are broken into the months of the year. As we could see through the months of May to October the rides tend to be at its highest. which could be understanable because they are warmer months. While in the colder months such as November to March rides tend to be at its lowest
 
 ## Phase 6: Act
 After analyzing, we reached into the following conclusion:
