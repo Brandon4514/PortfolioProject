@@ -114,3 +114,26 @@ Use the filter to get rid of rows where trips where negative duration
 #remove where ride_length is less than a minute
 clean_cyclist <- clean_cyclist[!(clean_cyclist$ride_lenght <= 1),]
 ```
+## Phase 4: Aanlyze
+
+Performed data aggregation using R Programming
+```r
+filter(clean_cyclist, ride_lenght > 870000 & member_casual == "casual")
+clean_cyclist <- clean_cyclist[!(clean_cyclist$ride_lenght > 870000 & clean_cyclist$member_casual =="casual"),]
+
+#difference between casual and members 
+aggregate(clean_cyclist$ride_lenght ~ clean_cyclist$member_casual, FUN = mean)
+aggregate(clean_cyclist$ride_lenght ~ clean_cyclist$member_casual, FUN = median)
+aggregate(clean_cyclist$ride_lenght ~ clean_cyclist$member_casual, FUN = max)
+aggregate(clean_cyclist$ride_lenght ~ clean_cyclist$member_casual, FUN = min)
+
+#average ride time per day casual vs member 
+aggregate(clean_cyclist$ride_lenght ~ clean_cyclist$member_casual + clean_cyclist$day_of_week, FUN = mean)
+
+# create new data frame for members vs casuals by weekday ,average duration, numbers of rides and ride type
+member_casual_ridetype <- clean_cyclist %>%
+  group_by(member_casual, day_of_week, rideable_type) %>%
+  summarise(number_of_rides = n(), average_duration = mean(ride_lenght)) %>%
+  arrange(member_casual, day_of_week)
+
+```
