@@ -142,5 +142,6 @@ member_casual_ridetype <- clean_cyclist %>%
 
 In this Graph we will see the number of rides broken down into the hours of the day. We could see that there is two spikes in the member line one between the hours of 5-10 and the other one at 15-17. In the other hand, casual riders-rides keep increasing between the hours of 5-17
 
+![Number_rides_by_days_into_hours](https://user-images.githubusercontent.com/108597401/177031731-0d425387-aca1-4d8e-a5e1-525aa5908944.png)
 
-
+In these graphs we could observe that the rides are borken down into each day of the week by hours. This shows that member riders are more active through the week days.While casual riders are more active in the weekends
