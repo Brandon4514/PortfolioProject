@@ -138,9 +138,9 @@ member_casual_ridetype <- clean_cyclist %>%
 
 ```
 ## Phase 5: Share
-![Number_of_rides_by_hour](https://user-images.githubusercontent.com/108597401/177031342-fbe8e6b1-aafd-4be1-b0e1-2a076e06dbed.png)
+![Number_of_rides_by_hour](https://user-images.githubusercontent.com/108597401/177033124-f1bd038b-1e1f-40dd-a81f-7f3635f601e0.png)
 
-In this Graph we will see the number of rides broken down into the hours of the day. We could see that there is two spikes in the member line one between the hours of 5-10 and the other one at 15-17. In the other hand, casual riders-rides keep increasing between the hours of 5-17
+In this Graph we will see the number of rides broken down into the hours of the day. For both of the groups we could see that the rides are rising throughout the day beginning from 4 to 17 being the peak for both of them. But for members we notoce that we have three peaks one being 8 hours during the moening ,the other one  12 hours during the lunch time and the last one being at 17 hours in the evening. 
 
 ![Number_rides_by_days_into_hours](https://user-images.githubusercontent.com/108597401/177031731-0d425387-aca1-4d8e-a5e1-525aa5908944.png)
 
