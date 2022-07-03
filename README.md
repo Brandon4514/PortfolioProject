@@ -144,4 +144,11 @@ In this Graph we will see the number of rides broken down into the hours of the 
 
 ![Number_rides_by_days_into_hours](https://user-images.githubusercontent.com/108597401/177031731-0d425387-aca1-4d8e-a5e1-525aa5908944.png)
 
-In these graphs we could observe that the rides are borken down into each day of the week by hours. This shows that member riders are more active through the week days.While casual riders are more active in the weekends
+In these graphs we could observe that the rides are borken down into each day of the week by hours.
+
+![Number_of_rides_by_type](https://user-images.githubusercontent.com/108597401/177031938-715ece9d-441a-4809-8065-5307e4e9ea5b.png)
+
+In this Graph we could see that member riders are more active through the week days, while casual riders are more active in the weekends
+
+
+
