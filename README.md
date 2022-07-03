@@ -150,5 +150,8 @@ In these graphs we could observe that the rides are borken down into each day of
 
 In this Graph we could see that member riders are more active through the week days, while casual riders are more active in the weekends
 
+![Number_of_rides_month](https://user-images.githubusercontent.com/108597401/177032549-03ce65b4-b57f-46ad-80f2-013ef7d49946.png)
+
+In this graph the number of rides are broken into the months of the year. As we could see though the monhts of May to October the rides tend to be at its highest. which could be understanable because they are warmer months. While in the colder months such as November tp March rides tend to be at its lowest
 
 
