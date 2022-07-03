@@ -137,3 +137,6 @@ member_casual_ridetype <- clean_cyclist %>%
   arrange(member_casual, day_of_week)
 
 ```
+## Phase 5: Share
+
+
