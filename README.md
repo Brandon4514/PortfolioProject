@@ -138,5 +138,9 @@ member_casual_ridetype <- clean_cyclist %>%
 
 ```
 ## Phase 5: Share
+![Number_of_rides_by_hour](https://user-images.githubusercontent.com/108597401/177031342-fbe8e6b1-aafd-4be1-b0e1-2a076e06dbed.png)
+
+In this Graph we will see the number of rides broken down into the hours of the day. We could see that there is two spikes in the member line one between the hours of 5-10 and the other one at 15-17. In the other hand, casual riders-rides keep increasing between the hours of 5-17
+
 
 
