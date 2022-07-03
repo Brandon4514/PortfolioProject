@@ -31,6 +31,8 @@ The ROCCC approach is used to determine the crediblity of the data
 * Cited - The data is cited and is available under Data License Agreement.
 
 ## Phase 3: Process
+The tools that I will be using for the process phase is R Programming. R is very useful to handle huge datasets efficiently.
 
+### instal and load the neccsary packages
 
 
