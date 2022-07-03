@@ -33,6 +33,84 @@ The ROCCC approach is used to determine the crediblity of the data
 ## Phase 3: Process
 The tools that I will be using for the process phase is R Programming. R is very useful to handle huge datasets efficiently.
 
-### instal and load the neccsary packages
+#### Install and load the necessary packages
+```r
+install.packages("tidyverse")
+install.packages("skimr")
+install.packages("lubridate")
+install.packages("janitor")
+installed.packages("scales")
+install.packages("data.table")
+install.packages("dplyr")
+install.packages("hms")
+library(hms)
+library(tidyverse)
+library(skimr)
+library(lubridate)
+library(janitor)
+library(scales)
+library(readr)
+library(data.table)
+library(dplyr)
+```
+#### insert all 12 csv files and merge them into one whole dataset
+```r
+#load the data frames
+jul07_df <- read_csv("202106-divvy-tripdata.csv")
+aug08_df <- read_csv("202107-divvy-tripdata.csv")
+sep09_df <- read_csv("202108-divvy-tripdata.csv")
+oct10_df <- read_csv("202109-divvy-tripdata.csv")
+nov11_df <- read_csv("202110-divvy-tripdata.csv")
+dec12_df <- read_csv("202111-divvy-tripdata.csv")
+jan01_df <- read_csv("202112-divvy-tripdata.csv")
+feb02_df <- read_csv("202201-divvy-tripdata.csv")
+mar03_df <- read_csv("202202-divvy-tripdata.csv")
+apr04_df <- read_csv("202203-divvy-tripdata.csv")
+may05_df <- read_csv("202204-divvy-tripdata.csv")
+jun06_df <- read_csv("202205-divvy-tripdata.csv")
 
+#merge the data frames into one
+cyclist_df <- rbind( jul07_df, aug08_df, sep09_df, oct10_df, nov11_df, dec12_df, jan01_df, feb02_df, mar03_df, apr04_df, may05_df, jun06_df)
 
+```
+#### Cleaning 
+```r
+#remove all the nulls
+clean_cyclist <- drop_na(cyclist_df)
+
+# remove unnecessary columns  
+clean_cyclist = subset(clean_cyclist, select = -c(start_lat,start_lng,end_lat, end_lng))
+
+#remove duplicates 
+clean_cyclist <- distinct(clean_cyclist)
+```
+#### Prepare for analysis
+* Added column called "ride_length and calculate the length of each ride 
+* Added new columns to calculate the following for each ride
+  * Date
+  * Year
+  * Month
+  * Day
+  * Day of week
+```r
+# add a column that calculates the ride length in minutes  
+clean_cyclist$ride_lenght <- difftime(clean_cyclist$ended_at, clean_cyclist$started_at, units = "mins")
+clean_cyclist$ride_lenght <- as.numeric(as.character(clean_cyclist$ride_lenght))
+
+#add a new column for day of the week ( 1= Monday and 7= Sunday )
+clean_cyclist$date <- as.Date(clean_cyclist$started_at) # start of the day 
+clean_cyclist$day_of_week <- wday(clean_cyclist$started_at) # day of the week
+clean_cyclist$day_of_week <- format(as.Date(clean_cyclist$date), "%A") # day of the week column 
+clean_cyclist$month <- format(as.Date(clean_cyclist$date), "%m") # month column 
+clean_cyclist$day <- format(as.Date(clean_cyclist$date), "%d") # day column 
+clean_cyclist$year <- format(as.Date(clean_cyclist$date), "%y") # year column 
+clean_cyclist$time <- format(as.Date(clean_cyclist$date), "%H:%M:%S")
+clean_cyclist$time <- as_hms((clean_cyclist$started_at))
+clean_cyclist$hour <- hour(clean_cyclist$time) # column for time
+```
+#### check for errors 
+Use the filter to get rid of rows where trips where negative duration 
+```r
+#remove where ride_length is less than a minute
+clean_cyclist <- clean_cyclist[!(clean_cyclist$ride_lenght <= 1),]
+```
