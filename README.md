@@ -154,4 +154,15 @@ In this Graph we could see that member riders are more active through the week d
 
 In this graph the number of rides are broken into the months of the year. As we could see though the monhts of May to October the rides tend to be at its highest. which could be understanable because they are warmer months. While in the colder months such as November tp March rides tend to be at its lowest
 
+## Phase 6: Act
+After analyzing, we reached into the following conclusion:
+* Casual riders tend to be more active during the weekends and member throughout the week days.
+* During the months of May to Septmber are the most active on both groups
+* casual riders tend to use bikes more for recreational purposes
+
+My top 3 recommendations based on my analysis 
+1. Design packages system where casual riders are incentivize to buy weekends pass. Also add additional perks to members where after a ceratin amount of miles they get discounts on their next memberships or if they refer a friend.
+2. Design some type of packages system where casual riders are able to buy seasonal pass for specific periods of the year
+3. Create effective and efficient promotions for members on busiest times and station. this will incetivize casual riders to buy member pass in order to access bike during busy times.
+
 
